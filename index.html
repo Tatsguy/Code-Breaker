@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Braker</title>
+</head>
+
+<body>
+    <center>
+        <h1>Bienvenido a Code Breaker</h1>
+        <h2>El juego consiste en adivinar un numero de 4 digitos generado aleatoriamente, este <br> numero tan especial
+            no cuenta con ningun termino repetido, cada uno es unico.</h2>
+        <h3>Para apoyarte con tu tarea, con cada intento obtendras unas cuentas pistas que te ayudaran a descifrar el
+            numero.</h3>
+        <p>El <b>*</b> significa que un digito es correcto y esta en la misma posicion.</p>
+        <p>El <b>-</b> indica que un digito si pertenece al numero pero tiene una posicion diferente.</p>
+        <h3>En ningun momento se te indicara a que digito corresponde cada pista, eso lo determinaras tu.</h3>
+        <h1>Que comience el juego.</h1>
+        <button style="display: block; margin-bottom: 20px;" id="start" type="button" onclick="iniciarJuego()">Iniciar
+            Juego</button>
+        <label for="txtNum">Adivina el numero</label><br>
+        <input type="text" id="txtNum" disabled="true" maxlength="4" placeholder="Ejemplo: 5623"><br><br>
+        <button id="btnCtrl" disabled="true" type="button" onclick="test()">Verificar</button>
+        <p id="resTitle"></p>
+        <p id="resInfo"></p>
+    </center>
+    <div style="position: fixed;top: 0;right: 0;width: 300px; text-align: center;">
+        <h2>Historial</h2>
+        <table border style="text-align: center; width: 100%;">
+            <thead>
+                <tr>
+                    <th>Intento</th>
+                    <th>Pista</th>
+                </tr>
+            </thead>
+            <tbody id="intentos"></tbody>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
